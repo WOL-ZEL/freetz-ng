@@ -675,7 +675,7 @@ function create_LD_PRELOAD_wrapper() {
 
 	cat <<- EOF >> "${FILESYSTEM_MOD_DIR}${file_to_wrap}"
 		#!/bin/sh
-		export LD_PRELOAD="${libraries_to_preload}\${LD_PRELOAD:+:}\${LD_PRELOAD}"
+		#export LD_PRELOAD="${libraries_to_preload}\${LD_PRELOAD:+:}\${LD_PRELOAD}"
 		exec ${dname}/${bname} "\$@"
 	EOF
 
